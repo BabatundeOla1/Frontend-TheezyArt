@@ -1,0 +1,134 @@
+.paintingsContainer {
+  padding: 2rem;
+}
+
+.paintingsHeading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.galleryGrid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 1rem 0 2rem;
+}
+
+
+.paintingCard {
+  cursor: pointer;
+  text-align: center;
+}
+
+.paintingImage {
+  width: 100%;
+  height: 400px; 
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f0f0f0; 
+}
+
+
+.paintingTitle {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.paintingDescription {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.paintingYear {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: black; */
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* .fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+} */
+
+.fullscreenContent {
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.fullscreenImage {
+  width: 100vw;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.fullscreenDetails {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+.fullscreenDetails h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.fullscreenDetails p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.fullscreenDetails small {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.fullscreenClose {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
