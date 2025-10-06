@@ -49,9 +49,7 @@ const Contact = () => {
           <div>
             <h4 style={{ marginBottom: '0.75rem' }}>Ongoing Series:</h4>
             <ul style={listStyle}>
-              <li>PUZZLE SERIES</li>
-              <li>OBA OBIRIN</li>
-              <li>MOVE BY MOVE</li>
+              <li>SOUL COMPANION</li>
             </ul>
             <h4 style={{ marginTop: '1.5rem', marginBottom: '0.75rem' }}>Site Map</h4>
             <ul style={listStyle}>
@@ -63,7 +61,6 @@ const Contact = () => {
           </div>
           <div>
             <h4 style={{ marginBottom: '0.75rem' }}>Contact</h4>
-            <p>Lagos — Los Angeles — London</p>
             <p>olaleyebabatun@gmail.com</p>
           </div>
           <div>
