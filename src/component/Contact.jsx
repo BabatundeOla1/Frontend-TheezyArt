@@ -6,8 +6,8 @@ const Contact = () => {
   const linkStyle = { display: 'inline-flex', alignItems: 'center', justifyContent: 'center' };
 
   const heroStyle = { width: '100%', minHeight: '40vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55))', color: '#fff', textAlign: 'center' };
-  const formSectionStyle = { backgroundColor: '#e6e6e6', padding: '3rem 1rem' };
-  const formContainerStyle = { maxWidth: '980px', margin: '0 auto', backgroundColor: '#f7f7f7', borderRadius: '8px', padding: '2rem', boxShadow: '0 2px 10px rgba(0,0,0,0.08)' };
+  const formSectionStyle = { backgroundColor: '#e6e6e6', padding: '3rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' };
+  const formContainerStyle = { maxWidth: '980px', margin: '0 auto', padding: '2rem', backgroundColor: 'transparent', borderRadius: 0, boxShadow: 'none' };
   const formTitleStyle = { textAlign: 'center', marginBottom: '1.25rem', color: '#333', fontWeight: 600, fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' };
   const gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' };
   const inputStyle = { width: '100%', padding: '0.9rem 1rem', borderRadius: '6px', border: '1px solid #d0d0d0', outline: 'none', fontSize: '1rem', backgroundColor: '#fff' };
@@ -74,11 +74,11 @@ const Contact = () => {
           </div>
           <div>
             <h4 style={{ marginBottom: '0.75rem' }}>Newsletter</h4>
-            <form action="https://formsubmit.co/olaleyebabatun@gmail.com" method="POST">
+            <form action="https://formsubmit.co/olaleyebabatun@gmail.com" method="POST" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
               <input type="hidden" name="_subject" value="Newsletter Subscription" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="email" name="newsletter_email" placeholder="Enter Your Email" style={{ ...inputStyle, backgroundColor: '#1a1a1a', color: '#fff', borderColor: '#333' }} required />
-              <button type="submit" style={{ ...sendBtnStyle, marginTop: '0.75rem' }}>Subscribe</button>
+              <input type="email" name="newsletter_email" placeholder="Enter Your Email" style={{ ...inputStyle, backgroundColor: '#1a1a1a', color: '#fff', borderColor: '#333', width: 'clamp(180px, 40vw, 320px)' }} required />
+              <button type="submit" style={{ ...sendBtnStyle, marginTop: '0.75rem', backgroundColor: '#7e8388' }}>Subscribe</button>
             </form>
           </div>
         </div>
