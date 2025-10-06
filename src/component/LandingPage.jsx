@@ -15,7 +15,7 @@ export default function LandingPage() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 8000); // slowed down auto-advance
     return () => clearInterval(timer);
   }, [images.length]);
 
@@ -52,7 +52,7 @@ export default function LandingPage() {
             inset: 0,
             display: "flex",
             height: "100%",
-            transition: "transform 1.0s cubic-bezier(0.22, 1, 0.36, 1)",
+            transition: "transform 2.5s cubic-bezier(0.22, 1, 0.36, 1)",
             willChange: "transform",
             transform: `translateX(-${index * 100}vw)`,
           }}
