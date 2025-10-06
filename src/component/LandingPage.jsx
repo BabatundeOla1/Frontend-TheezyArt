@@ -9,13 +9,13 @@ export default function LandingPage() {
   const images = [img1, img2, img3, img4, img5];
   const [index, setIndex] = useState(0);
   const angle = 360 / images.length;
-  const radius = 900; // ring depth
-  const overscan = 1.06; // slight scale to avoid any edge gaps
+  const radius = 900; 
+  const overscan = 1.06; 
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 8000); // slowed down auto-advance
+    }, 8000); 
     return () => clearInterval(timer);
   }, [images.length]);
 

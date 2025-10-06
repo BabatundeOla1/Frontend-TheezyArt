@@ -14,20 +14,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff; 
-  color: #000;            
-  padding: 0.75rem 1.5rem;
+  background-color: #003153; /* Prussian Blue */
+  color: #fff;
+  padding: 0 1.5rem;
+  min-height: 3cm; /* Taller navbar */
   flex-wrap: wrap;
-  border-bottom: 1px solid #e0e0e0; 
-  font-size:smaller;
+  border-bottom: none;
+  font-size: smaller;
+  box-sizing: border-box;
 }
 
 .logo {
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   margin: 0;
-  color: #000; 
-  font-weight:lighter;
-  font-family:'Times New Roman', Times, serif;
+  color: #fff;
+  font-weight: 700; /* bolder */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-links {
@@ -41,14 +43,15 @@ body {
 }
 
 .nav-links li a {
-  color: #000; 
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600; /* a bit bold */
+  letter-spacing: 0.02em;
   transition: color 0.2s ease;
 }
 
 .nav-links li a:hover {
-  color: #0077cc; 
+  color: #66b2ff; /* lighter blue on hover */
 }
 
 

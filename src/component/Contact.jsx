@@ -19,12 +19,6 @@ const Contact = () => {
         <a href="https://www.instagram.com/abdullahi_olaleye" target="_blank" rel="noopener noreferrer" style={linkStyle} aria-label="Instagram">
           <FaInstagram style={iconStyle} />
         </a>
-        {/* <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener noreferrer" style={linkStyle} aria-label="LinkedIn">
-          <FaLinkedinIn style={iconStyle} />
-        </a>
-        <a href="https://www.youtube.com/@YOUR_YOUTUBE_CHANNEL" target="_blank" rel="noopener noreferrer" style={linkStyle} aria-label="YouTube">
-          <FaYoutube style={iconStyle} />
-        </a> */}
         <a href="mailto:olaleyebabatun@gmail.com" style={linkStyle} aria-label="Email">
           <FaEnvelope style={iconStyle} />
         </a>
