@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="app-container">
         <nav className="nav">
-          <h2 className="logo">BABATUNDE OLALEYE</h2>
+          <h2 className="logo">B.O</h2>
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
