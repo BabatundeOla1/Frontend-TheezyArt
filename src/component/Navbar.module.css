@@ -1,0 +1,28 @@
+.navbar {
+  background-color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #222;
+}
+
+.brand {
+  color: white;
+  font-family: 'Playfair Display', serif; /* gives it an elegant artistic look */
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #f4c542; /* golden highlight on hover */
+}

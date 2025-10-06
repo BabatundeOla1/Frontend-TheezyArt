@@ -1,39 +1,66 @@
-import React from "react";
-// import { Button } from "@/components/ui/button";
+import React, { useEffect, useState } from "react";
+import img1 from "../assets/Artwork 1.png";
+import img2 from "../assets/Artwork2.jpg";
+import img3 from "../assets/Artwork3.jpg";
+import img4 from "../assets/Artwork4.jpg";
+import img5 from "../assets/Artwork5.jpg";
 
 export default function LandingPage() {
+  const images = [img1, img2, img3, img4, img5];
+  const [index, setIndex] = useState(0);
+  const angle = 360 / images.length;
+  const radius = 900; 
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
-    <main className="w-full min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/dbd3014c-bb92-4965-a85d-62d688d60abe.png')` }}>
-      <div className="bg-black/50 w-full min-h-screen flex flex-col justify-between">
-        <header className="flex justify-between items-center px-10 py-6 text-white">
-          <h1 className="text-2xl font-semibold tracking-widest">YOUR NAME STUDIO</h1>
-          <nav className="space-x-6 hidden md:flex">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#paintings" className="hover:underline">Paintings</a>
-            <a href="#portfolio" className="hover:underline">Portfolio</a>
-            <a href="#cv" className="hover:underline">CV</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-          </nav>
-        </header>
-
-        <div className="flex-1 flex items-center justify-center text-white text-center px-6">
-          <div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">Welcome to My Studio</h2>
-            <p className="text-lg md:text-xl max-w-xl mx-auto mb-6">
-              Explore a world of colors, textures, and expressions through my contemporary artworks.
-            </p>
-            <Button className="bg-white text-black hover:bg-gray-200">View Portfolio</Button>
-          </div>
+    <section style={{ width: "100%", height: "100vh", margin: 0 }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          perspective: "1200px",
+          backgroundColor: "#000",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            transformStyle: "preserve-3d",
+            transition: "transform 1.2s ease-in-out",
+            transform: `translateZ(-${radius}px) rotateY(${index * angle}deg)`,
+          }}
+        >
+          {images.map((src, i) => (
+            <figure
+              key={i}
+              style={{
+                position: "absolute",
+                inset: 0,
+                margin: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transform: `rotateY(${i * angle}deg) translateZ(${radius}px)`,
+              }}
+            >
+              <img
+                src={src}
+                alt={`Artwork ${i + 1}`}
+                style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
+              />
+            </figure>
+          ))}
         </div>
-
-        <footer className="md:hidden bg-black/70 p-4 flex justify-center space-x-4 text-white">
-          <a href="#about">About</a>
-          <a href="#paintings">Paintings</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#cv">CV</a>
-          <a href="#contact">Contact</a>
-        </footer>
       </div>
-    </main>
+    </section>
   );
 }
