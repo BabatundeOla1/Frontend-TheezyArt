@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #003153; /* Prussian Blue */
+  background-color: #001524; /* Prussian Blue */
   color: #fff;
   padding: 0 1.5rem;
   min-height: 3cm; /* Taller navbar */

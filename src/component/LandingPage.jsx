@@ -10,7 +10,7 @@ export default function LandingPage() {
   const [index, setIndex] = useState(0);
   const angle = 360 / images.length;
   const radius = 900; 
-  const overscan = 1.06; 
+  const overscan = 1.02; 
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,7 +38,7 @@ export default function LandingPage() {
             inset: 0,
             backgroundImage: `url(${images[index]})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center top",
             transform: `scale(${overscan})`,
             transition: "opacity 0.6s ease",
             willChange: "opacity",
@@ -76,6 +76,7 @@ export default function LandingPage() {
                   width: "100vw",
                   height: "100vh",
                   objectFit: "cover",
+                  objectPosition: "center top",
                   transform: `scale(${overscan})`,
                   willChange: "transform",
                 }}
