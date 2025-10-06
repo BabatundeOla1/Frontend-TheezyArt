@@ -33,3 +33,36 @@
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1rem;
+  }
+  .cv-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .cv-section h3 {
+    font-size: 1.1rem;
+    padding-top: 0.75rem;
+  }
+  .cv-section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    padding: 0.75rem;
+  }
+  .cv-title {
+    font-size: 1.5rem;
+  }
+  .cv-section h3 {
+    font-size: 1rem;
+  }
+  .cv-section p {
+    font-size: 0.85rem;
+  }
+}

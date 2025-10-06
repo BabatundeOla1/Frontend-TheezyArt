@@ -8,19 +8,19 @@ const Contact = () => {
   const heroStyle = { width: '100%', minHeight: '40vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55))', color: '#fff', textAlign: 'center' };
   const formSectionStyle = { backgroundColor: '#e6e6e6', padding: '3rem 1rem' };
   const formContainerStyle = { maxWidth: '980px', margin: '0 auto', backgroundColor: '#f7f7f7', borderRadius: '8px', padding: '2rem', boxShadow: '0 2px 10px rgba(0,0,0,0.08)' };
-  const formTitleStyle = { textAlign: 'center', marginBottom: '1.25rem', color: '#333', fontWeight: 600, fontSize: '1.25rem' };
-  const gridStyle = { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' };
+  const formTitleStyle = { textAlign: 'center', marginBottom: '1.25rem', color: '#333', fontWeight: 600, fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' };
+  const gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' };
   const inputStyle = { width: '100%', padding: '0.9rem 1rem', borderRadius: '6px', border: '1px solid #d0d0d0', outline: 'none', fontSize: '1rem', backgroundColor: '#fff' };
   const textareaStyle = { ...inputStyle, minHeight: '140px', resize: 'vertical' };
   const sendBtnWrapStyle = { display: 'flex', justifyContent: 'center', marginTop: '1.25rem' };
-  const sendBtnStyle = { backgroundColor: '#333', color: '#fff', border: 'none', padding: '0.9rem 2rem', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 };
-  const footerStyle = { backgroundColor: '#0b0b0b', color: '#fff', padding: '2.5rem 1rem' };
-  const footerGridStyle = { maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1.5fr 1.5fr 1.5fr', gap: '2rem', alignItems: 'start' };
+  const sendBtnStyle = { backgroundColor: '#001524', color: '#fff', border: 'none', padding: '0.9rem 2rem', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 };
+  const footerStyle = { backgroundColor: '#001524', color: '#fff', padding: '2.5rem 1rem' };
+  const footerGridStyle = { maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', alignItems: 'start' };
   const listStyle = { listStyle: 'none', padding: 0, margin: 0 };
 
   return (
     <div>
-      <section style={heroStyle}><h1 style={{ fontSize: '3rem', fontWeight: 700, letterSpacing: '0.5px' }}>Get In Touch</h1></section>
+      <section style={heroStyle}><h1 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, letterSpacing: '0.5px' }}>Get In Touch</h1></section>
       <section style={formSectionStyle}>
         <div style={formContainerStyle}>
           <h3 style={formTitleStyle}>How can we help?</h3>
