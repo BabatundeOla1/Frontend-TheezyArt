@@ -6,11 +6,11 @@ const Contact = () => {
   const linkStyle = { display: 'inline-flex', alignItems: 'center', justifyContent: 'center' };
 
   const heroStyle = { width: '100%', minHeight: '40vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55))', color: '#fff', textAlign: 'center' };
-  const formSectionStyle = { backgroundColor: '#e6e6e6', padding: '3rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' };
-  const formContainerStyle = { maxWidth: '980px', margin: '0 auto', padding: '2rem', backgroundColor: 'transparent', borderRadius: 0, boxShadow: 'none' };
+  const formSectionStyle = { backgroundColor: '#e6e6e6', padding: 'clamp(2rem, 6vw, 3rem) 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' };
+  const formContainerStyle = { maxWidth: 'clamp(900px, 92vw, 1400px)', margin: '0 auto', padding: '2rem', backgroundColor: 'transparent', borderRadius: 0, boxShadow: 'none' };
   const formTitleStyle = { textAlign: 'center', marginBottom: '1.25rem', color: '#333', fontWeight: 600, fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' };
-  const gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' };
-  const inputStyle = { width: '100%', padding: '0.9rem 1rem', borderRadius: '6px', border: '1px solid #d0d0d0', outline: 'none', fontSize: '1rem', backgroundColor: '#fff' };
+  const gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 'clamp(0.75rem, 2vw, 1rem)' };
+  const inputStyle = { width: '100%', maxWidth: 'clamp(280px, 90vw, 960px)', padding: 'clamp(0.8rem, 2.5vw, 1rem) clamp(0.9rem, 3vw, 1.25rem)', borderRadius: '6px', border: '1px solid #d0d0d0', outline: 'none', fontSize: 'clamp(0.95rem, 2.5vw, 1rem)', backgroundColor: '#fff' };
   const textareaStyle = { ...inputStyle, minHeight: '140px', resize: 'vertical' };
   const sendBtnWrapStyle = { display: 'flex', justifyContent: 'center', marginTop: '1.25rem' };
   const sendBtnStyle = { backgroundColor: '#001524', color: '#fff', border: 'none', padding: '0.9rem 2rem', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 };
@@ -30,8 +30,8 @@ const Contact = () => {
             <input type="hidden" name="_captcha" value="false" />
             <div style={gridStyle}>
               <input style={inputStyle} type="text" name="first_name" placeholder="First Name" required />
-              <input style={inputStyle} type="email" name="email" placeholder="Email" required />
               <input style={inputStyle} type="text" name="last_name" placeholder="Last Name" required />
+              <input style={inputStyle} type="email" name="email" placeholder="Email" required />
               <input style={inputStyle} type="tel" name="phone" placeholder="Phone No." />
             </div>
             <div style={{ marginTop: '1rem' }}>
@@ -74,11 +74,11 @@ const Contact = () => {
           </div>
           <div>
             <h4 style={{ marginBottom: '0.75rem' }}>Newsletter</h4>
-            <form action="https://formsubmit.co/olaleyebabatun@gmail.com" method="POST" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <form action="https://formsubmit.co/olaleyebabatun@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="Newsletter Subscription" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="email" name="newsletter_email" placeholder="Enter Your Email" style={{ ...inputStyle, backgroundColor: '#1a1a1a', color: '#fff', borderColor: '#333', width: 'clamp(180px, 40vw, 320px)' }} required />
-              <button type="submit" style={{ ...sendBtnStyle, marginTop: '0.75rem', backgroundColor: '#7e8388' }}>Subscribe</button>
+              <input type="email" name="newsletter_email" placeholder="Enter Your Email" style={{ ...inputStyle, maxWidth: 'clamp(240px, 70vw, 420px)', backgroundColor: '#1a1a1a', color: '#fff', borderColor: '#333' }} required />
+              <button type="submit" style={{ ...sendBtnStyle, marginTop: '0.75rem' }}>Subscribe</button>
             </form>
           </div>
         </div>
